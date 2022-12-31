@@ -1,7 +1,12 @@
 /* TODO ======================= GOOGLE FONTS ======================= */
 /* ! font dari website https://fonts.google.com */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:300,400,500,600,700,800,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rancho&display=swap");
+:root {
+  --color: #094b65;
+}
 
+/* TODO ======================= BASE ======================= */
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +20,7 @@ body {
   min-height: 100vh;
 }
 
+/* TODO ======================= HEADER ======================= */
 #header {
   position: absolute;
   top: 0;
@@ -27,8 +33,72 @@ body {
 }
 
 #header .logo {
-  color: #094b65;
+  color: var(--color);
   font-weight: 700;
   font-size: 2em;
   text-decoration: none;
+}
+
+#header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#header ul li {
+  list-style: none;
+  margin-left: 20px;
+}
+
+#header ul li a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: var(--color);
+  border-radius: 20px;
+}
+
+#header ul li a:hover,
+#header ul li a.active {
+  background: var(--color);
+  color: #fff;
+}
+
+/* TODO ======================= HOME ======================= */
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section #text {
+  position: absolute;
+  color: var(--color);
+  font-size: 10vw;
+  text-align: center;
+  line-height: 0.55em;
+  font-family: "Rancho", cursive;
+  transform: translateY(-50%);
+}
+
+section #text span {
+  font-size: 0.2em;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+
+#btn {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 30px;
+  background: #ff0;
+  color: var(--color);
+  font-size: 1.2em;
+  font-weight: 500;
+  letter-spacing: 2px;
+  border-radius: 40px;
+  transform: translateY(100px);
 }
