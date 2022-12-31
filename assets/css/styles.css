@@ -91,10 +91,10 @@ section img {
   top: 0;
   left: 0;
   width: 100%;
-  /* ? height disesuaikan dengan layar device, 
+  /* ? height disesuaikan dengan layar device (normal 100%), 
      ? untuk layar laptop ini cocoknya 110% 
      ? supaya navigasi bar-nya tidak ketutup pohon */
-  height: 100%;
+  height: 110%;
   object-fit: cover;
   pointer-events: none;
 }
