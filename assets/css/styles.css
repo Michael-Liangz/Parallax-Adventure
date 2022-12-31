@@ -129,19 +129,19 @@ section #text span {
   transform: translateY(100px);
 }
 
-.sec {
+.description {
   position: relative;
   padding: 100px;
   background: var(--color);
 }
 
-.sec h2 {
+.description h2 {
   font-size: 3.5em;
   color: #fff;
   margin-bottom: 10px;
 }
 
-.sec p {
+.description p {
   font-size: 1em;
   color: #fff;
 }
