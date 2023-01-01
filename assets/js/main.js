@@ -21,7 +21,7 @@ window.addEventListener("scroll", function () {
   header.style.top = value * 0.5 + "px";
 });
 
-// TODO ======================= Gsap ScrollTrigger JS =======================
+// TODO ======================= GSAP SCROLLTRIGGER JS =======================
 gsap.from("#m1", {
   scrollTrigger: {
     scrub: true,
