@@ -186,6 +186,10 @@ section.mountain img {
   pointer-events: none;
 }
 
+section.mountain img #sunset {
+  z-index: -1;
+}
+
 section.mountain #text-mountain {
   position: absolute;
   top: 50%;
