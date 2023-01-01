@@ -1,4 +1,5 @@
-let text = document.getElementById("text");
+// TODO ======================= WATERFALL =======================
+let textWaterfall = document.getElementById("text-waterfall");
 let bird1 = document.getElementById("bird1");
 let bird2 = document.getElementById("bird2");
 let forest = document.getElementById("forest");
@@ -10,7 +11,7 @@ let header = document.getElementById("header");
 window.addEventListener("scroll", function () {
   let value = this.window.scrollY;
 
-  text.style.top = 50 + value * -0.5 + "%";
+  textWaterfall.style.top = 50 + value * -0.5 + "%";
   bird1.style.top = value * -1.5 + "px";
   bird1.style.left = value * 2 + "px";
   bird2.style.top = value * -1.5 + "px";
@@ -21,7 +22,7 @@ window.addEventListener("scroll", function () {
   header.style.top = value * 0.5 + "px";
 });
 
-// TODO ======================= GSAP SCROLLTRIGGER JS =======================
+// TODO ======================= MOUNTAIN =======================
 gsap.from("#m1", {
   scrollTrigger: {
     scrub: true,
@@ -58,7 +59,7 @@ gsap.from("#plants", {
   },
   x: -500,
 });
-gsap.from(".text-mountain", {
+gsap.from("#text-mountain", {
   scrollTrigger: {
     scrub: true,
   },

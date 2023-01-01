@@ -22,7 +22,7 @@ body {
 }
 
 /* TODO ======================= HEADER ======================= */
-#header {
+header {
   position: absolute;
   top: 0;
   left: 0;
@@ -34,40 +34,40 @@ body {
   z-index: 10000;
 }
 
-#header .logo {
+.logo {
   color: var(--color);
   font-weight: 700;
   font-size: 2em;
   text-decoration: none;
 }
 
-#header ul {
+.navigation {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 40px;
 }
 
-#header ul li {
+.navigation li {
   list-style: none;
   margin-left: 20px;
 }
 
-#header ul li a {
+.navigation li a {
   text-decoration: none;
   padding: 6px 15px;
   color: var(--color);
   border-radius: 20px;
 }
 
-#header ul li a:hover,
-#header ul li a.active {
+.navigation li a:hover,
+.navigation li a.active {
   background: var(--color);
   color: #fff;
 }
 
 /* TODO ======================= WATERFALL ======================= */
-section {
+section.waterfall {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -76,7 +76,7 @@ section {
   align-items: center;
 }
 
-section::before {
+section.waterfall::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -87,7 +87,7 @@ section::before {
   z-index: 10;
 }
 
-section img {
+section.waterfall img {
   position: absolute;
   top: 0;
   left: 0;
@@ -96,12 +96,12 @@ section img {
   /* ? height disesuaikan dengan layar device (normal 100%), 
      ? untuk layar laptop ini cocoknya 110% 
      ? supaya navigasi bar-nya tidak ketutup pohon */
-  height: 105%;
+  height: 110%;
   object-fit: cover;
   pointer-events: none;
 }
 
-section #text {
+section.waterfall #text-waterfall {
   position: absolute;
   color: var(--color);
   font-size: 10vw;
@@ -111,15 +111,7 @@ section #text {
   transform: translateY(-50%);
 }
 
-section.mountain #text {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 6em;
-  color: var(--color);
-}
-
-section #text span {
+section.waterfall #text-waterfall span {
   font-size: 0.2em;
   letter-spacing: 2px;
   font-weight: 400;
@@ -139,19 +131,89 @@ section #text span {
   transform: translateY(100px);
 }
 
-.description {
+.description-waterfall {
   position: relative;
   padding: 100px;
   background: var(--color);
 }
 
-.description h2 {
+.description-waterfall h2 {
   font-size: 3.5em;
   color: #fff;
   margin-bottom: 10px;
 }
 
-.description p {
+.description-waterfall p {
+  font-size: 1em;
+  color: #fff;
+}
+
+/* TODO ======================= MOUNTAIN ======================= */
+section.mountain {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.mountain::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, var(--color), transparent);
+  z-index: 10;
+}
+
+section.mountain img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  /* ? height disesuaikan dengan layar device (normal 100%), 
+     ? untuk layar laptop ini cocoknya 110% 
+     ? supaya navigasi bar-nya tidak ketutup pohon */
+  height: 110%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+section.mountain #text-mountain {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 6em;
+  color: var(--color);
+  font-family: "Rancho", cursive;
+  text-align: center;
+  line-height: 0.55em;
+}
+
+section.mountain #text-mountain span {
+  font-size: 0.2em;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+
+.description-mountain {
+  position: relative;
+  padding: 100px;
+  background: var(--color);
+}
+
+.description-mountain h2 {
+  font-size: 3.5em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.description-mountain p {
   font-size: 1em;
   color: #fff;
 }
