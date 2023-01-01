@@ -5,7 +5,7 @@ let bird2 = document.getElementById("bird2");
 let forest = document.getElementById("forest");
 let rocks = document.getElementById("rocks");
 let water = document.getElementById("water");
-let btn = document.getElementById("btn");
+// let btn = document.getElementById("btn");
 let header = document.getElementById("header");
 
 window.addEventListener("scroll", function () {
@@ -16,7 +16,7 @@ window.addEventListener("scroll", function () {
   bird1.style.left = value * 2 + "px";
   bird2.style.top = value * -1.5 + "px";
   bird2.style.left = value * -5 + "px";
-  btn.style.marginTop = value * 1 + "px";
+  // btn.style.marginTop = value * 1 + "px";
   rocks.style.top = value * -0.12 + "px";
   forest.style.top = value * 0.25 + "px";
   header.style.top = value * 0.5 + "px";
@@ -51,7 +51,7 @@ gsap.from("#man", {
   scrollTrigger: {
     scrub: true,
   },
-  x: -250,
+  x: -300,
 });
 gsap.from("#plants", {
   scrollTrigger: {
