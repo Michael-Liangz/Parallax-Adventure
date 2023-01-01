@@ -66,8 +66,8 @@ body {
   color: #fff;
 }
 
-/* TODO ======================= HOME WATERFALL ======================= */
-section.waterfall {
+/* TODO ======================= WATERFALL ======================= */
+section {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -76,7 +76,7 @@ section.waterfall {
   align-items: center;
 }
 
-section.waterfall::before {
+section::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -87,20 +87,21 @@ section.waterfall::before {
   z-index: 10;
 }
 
-section.waterfall img {
+section img {
   position: absolute;
   top: 0;
   left: 0;
+  bottom: 0;
   width: 100%;
   /* ? height disesuaikan dengan layar device (normal 100%), 
      ? untuk layar laptop ini cocoknya 110% 
      ? supaya navigasi bar-nya tidak ketutup pohon */
-  height: 110%;
+  height: 105%;
   object-fit: cover;
   pointer-events: none;
 }
 
-section.waterfall #text {
+section #text {
   position: absolute;
   color: var(--color);
   font-size: 10vw;
@@ -110,7 +111,15 @@ section.waterfall #text {
   transform: translateY(-50%);
 }
 
-section.waterfall #text span {
+section.mountain #text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 6em;
+  color: var(--color);
+}
+
+section #text span {
   font-size: 0.2em;
   letter-spacing: 2px;
   font-weight: 400;
