@@ -4,7 +4,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Rancho&display=swap");
 
 :root {
-  --color: #094b65;
+  --color-waterfall: #094b65;
+  --color-mountain: #112434;
 }
 
 /* TODO ======================= BASE ======================= */
@@ -29,23 +30,24 @@ header {
   width: 100%;
   padding: 30px 100px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   z-index: 10000;
 }
 
 .logo {
-  color: var(--color);
+  color: var(--color-waterfall);
   font-weight: 700;
-  font-size: 3em;
+  font-size: 2em;
   text-decoration: none;
+  margin-right: 200px;
 }
 
 .navigation {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 10px;
 }
 
 .navigation li {
@@ -56,14 +58,14 @@ header {
 .navigation li a {
   text-decoration: none;
   padding: 10px 15px;
-  color: var(--color);
+  color: var(--color-waterfall);
   border-radius: 20px;
   font-weight: bolder;
 }
 
 .navigation li a:hover,
 .navigation li a.active {
-  background: var(--color);
+  background: var(--color-waterfall);
   color: #fff;
 }
 
@@ -84,7 +86,7 @@ section.waterfall::before {
   left: 0;
   width: 100%;
   height: 100px;
-  background: linear-gradient(to top, var(--color), transparent);
+  background: linear-gradient(to top, var(--color-waterfall), transparent);
   z-index: 10;
 }
 
@@ -104,7 +106,7 @@ section.waterfall img {
 
 section.waterfall #text-waterfall {
   position: absolute;
-  color: var(--color);
+  color: var(--color-waterfall);
   font-size: 10vw;
   text-align: center;
   line-height: 0.55em;
@@ -115,7 +117,7 @@ section.waterfall #text-waterfall {
 section.waterfall #text-waterfall span {
   font-size: 0.2em;
   letter-spacing: 2px;
-  font-weight: 400;
+  font-weight: bold;
   font-family: "Poppins", sans-serif;
 }
 
@@ -124,7 +126,7 @@ section.waterfall #text-waterfall span {
   display: inline-block;
   padding: 8px 30px;
   background: #fff;
-  color: var(--color);
+  color: var(--color-waterfall);
   font-size: 1.5em;
   font-weight: bolder;
   letter-spacing: 2px;
@@ -135,7 +137,7 @@ section.waterfall #text-waterfall span {
 .description-waterfall {
   position: relative;
   padding: 100px;
-  background: var(--color);
+  background: var(--color-waterfall);
 }
 
 .description-waterfall h2 {
@@ -166,7 +168,7 @@ section.mountain::before {
   left: 0;
   width: 100%;
   height: 50px;
-  background: linear-gradient(to top, var(--color), transparent);
+  background: linear-gradient(to top, var(--color-mountain), transparent);
   z-index: 10;
 }
 
@@ -189,7 +191,7 @@ section.mountain #text-mountain {
   top: 50%;
   transform: translateY(-50%);
   font-size: 6em;
-  color: var(--color);
+  color: var(--color-mountain);
   font-family: "Rancho", cursive;
   text-align: center;
   line-height: 0.55em;
@@ -198,14 +200,14 @@ section.mountain #text-mountain {
 section.mountain #text-mountain span {
   font-size: 0.2em;
   letter-spacing: 2px;
-  font-weight: 400;
+  font-weight: bold;
   font-family: "Poppins", sans-serif;
 }
 
 .description-mountain {
   position: relative;
   padding: 100px;
-  background: var(--color);
+  background: var(--color-mountain);
 }
 
 .description-mountain h2 {
