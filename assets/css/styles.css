@@ -5,6 +5,7 @@
 
 :root {
   --color-waterfall: #094b65;
+  --color-between-waterfall-and-mountain: #471d30;
   --color-mountain: #112434;
 }
 
@@ -14,6 +15,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -52,7 +54,7 @@ header {
 
 .navigation li {
   list-style: none;
-  margin-left: 20px;
+  margin-left: 50px;
 }
 
 .navigation li a {
@@ -137,7 +139,11 @@ section.waterfall #text-waterfall span {
 .description-waterfall {
   position: relative;
   padding: 100px;
-  background: var(--color-waterfall);
+  background: linear-gradient(
+    to bottom,
+    var(--color-waterfall) 25%,
+    var(--color-between-waterfall-and-mountain)
+  );
 }
 
 .description-waterfall h2 {
@@ -179,8 +185,7 @@ section.mountain img {
   bottom: 0;
   width: 100%;
   /* ? height disesuaikan dengan layar device (normal 100%), 
-     ? untuk layar laptop ini cocoknya 110% 
-     ? supaya navigasi bar-nya tidak ketutup pohon */
+     ? untuk layar laptop ini cocoknya 110% */
   height: 100%;
   object-fit: cover;
   pointer-events: none;
@@ -221,6 +226,77 @@ section.mountain #text-mountain span {
 }
 
 .description-mountain p {
+  font-size: 1em;
+  color: #fff;
+}
+
+/* TODO ======================= MOONLIGHT ======================= */
+section.moonlight {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 100px; */
+}
+
+section.moonlight::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #0a2a43, transparent);
+  z-index: 10000;
+}
+
+section.moonlight img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* ? height disesuaikan dengan layar device (normal 100%), 
+     ? untuk layar laptop ini cocoknya 110% */
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+section.moonlight img#moon {
+  mix-blend-mode: screen;
+}
+
+section.moonlight img#mountains_front {
+  z-index: 10;
+}
+
+section.moonlight #text-moonlight {
+  position: absolute;
+  /* top: 50%; */
+  /* transform: translateY(-20%); */
+  left: -350px;
+  font-size: 7.5vw;
+  color: #fff;
+  font-family: "Rancho", cursive;
+  /* z-index: 9; */
+  text-align: center;
+  line-height: 0.7em;
+}
+
+.description-moonlight {
+  position: relative;
+  padding: 100px;
+  background: var(--color-mountain);
+}
+
+.description-moonlight h2 {
+  font-size: 3.5em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.description-moonlight p {
   font-size: 1em;
   color: #fff;
 }

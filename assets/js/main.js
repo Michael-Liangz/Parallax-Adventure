@@ -65,3 +65,35 @@ gsap.from("#text-mountain", {
   },
   x: 500,
 });
+
+// TODO ======================= MOONLIGHT =======================
+let stars = document.getElementById("stars");
+let moon = document.getElementById("moon");
+let textMoonlight = document.getElementById("text-moonlight");
+
+window.addEventListener("scroll", function () {
+  let value = window.scrollY;
+  stars.style.left = value * 0.25 + "px";
+  textMoonlight.style.marginLeft = value * 0.5 + "px";
+});
+
+gsap.from("#moon", {
+  scrollTrigger: {
+    scrub: true,
+  },
+  y: 600,
+});
+
+gsap.from("#mountains_behind", {
+  scrollTrigger: {
+    scrub: true,
+  },
+  y: -1000,
+});
+
+gsap.from("#mountains_front", {
+  scrollTrigger: {
+    scrub: true,
+  },
+  y: -600,
+});
