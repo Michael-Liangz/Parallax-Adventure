@@ -6,7 +6,10 @@
 :root {
   --color-waterfall: #094b65;
   --color-between-waterfall-and-mountain: #471d30;
-  --color-mountain: #112434;
+  --color-mountain: #205471;
+  --color-between-mountain-and-moonlight: #1e2744;
+  --color-moonlight: #341138;
+  --color-end-moonlight: #3b1f51;
 }
 
 /* TODO ======================= BASE ======================= */
@@ -39,13 +42,14 @@ header {
 
 .logo {
   color: var(--color-waterfall);
-  font-weight: 700;
-  font-size: 2em;
+  font-weight: bolder;
+  font-size: 3em;
   text-decoration: none;
   margin-right: 200px;
+  font-family: "Rancho", cursive;
 }
 
-.navigation {
+/* .navigation {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,8 +67,7 @@ header {
   color: var(--color-waterfall);
   border-radius: 20px;
   font-weight: bolder;
-  /* font-size: 1.5em; */
-}
+} */
 
 .navigation li a:hover,
 .navigation li a.active {
@@ -149,14 +152,21 @@ section.waterfall #text-waterfall span {
 }
 
 .description-waterfall h2 {
-  font-size: 3.5em;
-  color: #fff;
+  font-size: 5em;
+  color: #838f15;
   margin-bottom: 10px;
+  text-align: center;
+  font-family: "Rancho", cursive;
+  /* -webkit-text-stroke: 0.01px #fff; */
+  font-weight: bolder;
 }
 
 .description-waterfall p {
-  font-size: 1em;
+  font-size: 1.2em;
   color: #fff;
+  text-align: justify;
+  font-family: "Poppins", sans-serif;
+  text-indent: 40px;
 }
 
 /* TODO ======================= MOUNTAIN ======================= */
@@ -200,10 +210,10 @@ section.mountain img #sunset {
 
 section.mountain #text-mountain {
   position: absolute;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
-  font-size: 6em;
-  color: var(--color-mountain);
+  font-size: 10vw;
+  color: #522842;
   font-family: "Rancho", cursive;
   text-align: center;
   line-height: 0.55em;
@@ -219,25 +229,36 @@ section.mountain #text-mountain span {
 .description-mountain {
   position: relative;
   padding: 100px;
-  background: var(--color-mountain);
+  background: linear-gradient(
+    to bottom,
+    var(--color-mountain) 25%,
+    var(--color-between-mountain-and-moonlight)
+  );
 }
 
 .description-mountain h2 {
-  font-size: 3.5em;
-  color: #fff;
+  font-size: 5em;
+  color: #fa6f3e;
   margin-bottom: 10px;
+  text-align: center;
+  font-family: "Rancho", cursive;
+  /* -webkit-text-stroke: 0.01px #fff; */
+  font-weight: bolder;
 }
 
 .description-mountain p {
-  font-size: 1em;
+  font-size: 1.2em;
   color: #fff;
+  text-align: justify;
+  font-family: "Poppins", sans-serif;
+  text-indent: 40px;
 }
 
 /* TODO ======================= MOONLIGHT ======================= */
 section.moonlight {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -250,7 +271,7 @@ section.moonlight::before {
   bottom: 0;
   width: 100%;
   height: 100px;
-  background: linear-gradient(to top, #0a2a43, transparent);
+  background: linear-gradient(to top, var(--color-moonlight), transparent);
   z-index: 10000;
 }
 
@@ -276,17 +297,17 @@ section.moonlight img#mountains_front {
 
 section.moonlight #text-moonlight {
   position: absolute;
-  left: -500px;
-  font-size: 7.5vw;
+  left: -700px;
+  font-size: 7vw;
   color: #fff;
   font-family: "Rancho", cursive;
   z-index: 9;
   text-align: center;
-  line-height: 0.7em;
+  line-height: 0.5em;
 }
 
 section.moonlight #text-moonlight span {
-  font-size: 0.5em;
+  font-size: 0.2em;
   letter-spacing: 1px;
   font-weight: bold;
   font-family: "Poppins", sans-serif;
@@ -295,16 +316,34 @@ section.moonlight #text-moonlight span {
 .description-moonlight {
   position: relative;
   padding: 100px;
-  background: var(--color-mountain);
+  background: linear-gradient(
+    to bottom,
+    var(--color-moonlight) 25%,
+    var(--color-end-moonlight)
+  );
 }
 
 .description-moonlight h2 {
-  font-size: 3.5em;
-  color: #fff;
+  font-size: 5em;
+  color: #4d4b9c;
   margin-bottom: 10px;
+  text-align: center;
+  font-family: "Rancho", cursive;
+  font-weight: bolder;
 }
 
 .description-moonlight p {
-  font-size: 1em;
+  font-size: 1.2em;
   color: #fff;
+  text-align: justify;
+  font-family: "Poppins", sans-serif;
+  text-indent: 40px;
+}
+
+.description-moonlight .end {
+  font-weight: bolder;
+  font-size: 3em;
+  text-align: center;
+  font-family: "Rancho", cursive;
+  color: #d9e0f1;
 }
