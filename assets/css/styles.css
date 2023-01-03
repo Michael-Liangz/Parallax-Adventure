@@ -161,12 +161,19 @@ section.waterfall #text-waterfall span {
   font-weight: bolder;
 }
 
-.description-waterfall p {
-  font-size: 1.2em;
+.description-waterfall q {
+  font-size: 2em;
   color: #fff;
   text-align: justify;
   font-family: "Poppins", sans-serif;
-  text-indent: 40px;
+}
+
+.description-waterfall span {
+  font-size: 2em;
+  color: #838f15;
+  text-align: justify;
+  font-family: "Rancho", cursive;
+  font-weight: bolder;
 }
 
 /* TODO ======================= MOUNTAIN ======================= */
@@ -246,12 +253,19 @@ section.mountain #text-mountain span {
   font-weight: bolder;
 }
 
-.description-mountain p {
-  font-size: 1.2em;
+.description-mountain q {
+  font-size: 2em;
   color: #fff;
   text-align: justify;
   font-family: "Poppins", sans-serif;
-  text-indent: 40px;
+}
+
+.description-mountain span {
+  font-size: 2em;
+  color: #fa6f3e;
+  text-align: justify;
+  font-family: "Rancho", cursive;
+  font-weight: bolder;
 }
 
 /* TODO ======================= MOONLIGHT ======================= */
@@ -332,18 +346,17 @@ section.moonlight #text-moonlight span {
   font-weight: bolder;
 }
 
-.description-moonlight p {
-  font-size: 1.2em;
+.description-moonlight q {
+  font-size: 2em;
   color: #fff;
   text-align: justify;
   font-family: "Poppins", sans-serif;
-  text-indent: 40px;
 }
 
-.description-moonlight .end {
-  font-weight: bolder;
-  font-size: 3em;
-  text-align: center;
+.description-moonlight span {
+  font-size: 2em;
+  color: #4d4b9c;
+  text-align: justify;
   font-family: "Rancho", cursive;
-  color: #d9e0f1;
+  font-weight: bolder;
 }
